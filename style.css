@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+* {
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    background-color: red;
+}
+
+h1 {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2.1em;
+    color: white;
+    background-color: #f00;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+button {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2.2em;
+    color: white;
+    background-color: #f00;
+    border: solid;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section {
+    padding-top: 20px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(16, 32px);
+    grid-template-rows: repeat(16, 32px);
+}
+
+.tile {
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    padding: 16px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "leftc text rightc";
+    padding-top: 20px;
+}
+
+.leftc {
+    grid-area: leftc;
+    justify-self: center;
+}
+
+.text {
+    grid-area: text;
+    justify-self: center;
+    color: white;
+    font-size: 1.6em;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+.rightc {
+    grid-area: rightc;
+    justify-self: center;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
