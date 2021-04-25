@@ -9,18 +9,22 @@ body {
     background-color: red;
 }
 
-h1 {
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 2.1em;
-    color: white;
-    background-color: #f00;
-    padding: 13px 32px;
-    text-align: center;
-    text-decoration: underline;
+/*Top buttons*/
+.header {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header";
+}
+
+#title {
+    grid-area: header;
+    justify-self: center;
+    margin-right: 15px;
 }
 
 button {
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.2em;
     color: white;
     background-color: #f00;
@@ -28,36 +32,34 @@ button {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    
 }
 
 button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/*Top buttons end*/
 
-section {
-    padding-top: 20px;
-    justify-content: center;
+
+#main {
+    width: 50vw;
+    height: 40vw;
+    background-color: white;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(16, 32px);
-    grid-template-rows: repeat(16, 32px);
-}
+} 
 
 .tile {
     background-color: white;
-    border-style: solid;
-    border-color: black;
-    padding: 16px;
+    border: thin solid black;
 }
 
 .footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "leftc text rightc";
+    grid-template-areas: 
+    "leftc texttitle rightc"
+    ". textauthor .";
     padding-top: 20px;
 }
 
@@ -66,9 +68,18 @@ section {
     justify-self: center;
 }
 
-.text {
-    grid-area: text;
+#project-title {
+    grid-area: texttitle;
     justify-self: center;
+    color: white;
+    font-size: 1.6em;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+#project-author {
+    grid-area: textauthor;
+    justify-self: center;
+    align-self: start;
     color: white;
     font-size: 1.6em;
     font-family: 'Cedarville Cursive', cursive;
@@ -84,4 +95,37 @@ section {
     height: 60px;
     background-color: white;
     border-radius: 50%;
+} 
+
+
+/*
+
+
+h1 {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2.1em;
+    color: white;
+    background-color: #f00;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: underline;
 }
+
+
+
+
+
+section {
+    background-color: white;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    margin: 15px 65px;
+}
+
+
+
+
+
+*/
